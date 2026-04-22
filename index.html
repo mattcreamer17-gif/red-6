@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A read on where AI fits inside ATARS and ARCADE. Prepared for Red 6.</title>
+<meta name="description" content="Saw the F-16 award in August and the Mentor-Protege with Lockheed last January. My bet: 40% of what you're learning on F-16 is already written down inside T-38 and MC-130 program folders and nobody has time to find it." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Telemetry strip -->
+<div class="telemetry" role="banner">
+  <div class="telemetry-inner">
+    <span><span class="telemetry-dot" aria-hidden="true"></span>LINK / SECURE</span>
+    <span>RECIPIENT &middot; RED 6 AEROSPACE, INC.</span>
+    <span>BOOTH 1067 &middot; CONF 2026</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="logo.png" alt="Red 6" />
+      <div class="nav-logo-meta">ATARS &middot; ARCADE &middot; CARBON</div>
+    </div>
+    <div class="nav-right">PREPARED FOR DAN, THOMAS, GLENN, NICK</div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <span class="hud-corner tl" aria-hidden="true"></span>
+  <span class="hud-corner tr" aria-hidden="true"></span>
+  <span class="hud-corner bl" aria-hidden="true"></span>
+  <span class="hud-corner br" aria-hidden="true"></span>
+
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <span>ORCHESTRATION BRIEF</span>
+        <span class="hero-eyebrow-target">FOR RED 6 / ATARS &amp; ARCADE</span>
+      </div>
+      <h1>A read on where AI actually fits inside ATARS and ARCADE, <em>and where it does not</em>.</h1>
+      <p class="hero-lede">F-16 is your first operational fighter integration. Three primes, five airframes on the roadmap, STRATFI burning down ATARS and ARCADE through 2026. The engineering team already solved most of this once on T-38 and MC-130. The question is how much of that learning is portable across programs.</p>
+
+      <div class="hero-meta" role="list">
+        <div class="hero-meta-item" role="listitem">
+          <div class="hero-meta-label">Engagement</div>
+          <div class="hero-meta-value">Orchestration audit. Scoped sprint.</div>
+        </div>
+        <div class="hero-meta-item" role="listitem">
+          <div class="hero-meta-label">Setting</div>
+          <div class="hero-meta-value">30 minutes. Your whiteboard.</div>
+        </div>
+        <div class="hero-meta-item" role="listitem">
+          <div class="hero-meta-label">Contact</div>
+          <div class="hero-meta-value">Matt Creamer, Eduba CRO</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Pitch body -->
+<section class="pitch">
+  <div class="pitch-inner">
+    <div class="section-label"><span class="num">01</span>THE HYPOTHESIS</div>
+    <h2>The rendering pipeline is not what slows you down. The repeat is.</h2>
+
+    <p>The F-16 integration is your first operational fighter. Lockheed Mentor-Protege in place since January 2024. Boeing on T-7 and F-15EX. STRATFI burning down ATARS and ARCADE through 2026. Three primes, five airframes on the roadmap, and an engineering team that already solved most of this once on T-38 and MC-130.</p>
+
+    <p>The question is how much of that learning is structured, interpretable, and portable across programs, and how much lives in one engineer's head. Eduba builds the layer in between. We call it computational orchestration. Most of what looks like an AI problem is actually three problems stacked. Roughly 60% is traditional code and data, 30% is rule-based logic, 10% is where a model genuinely earns its keep. Teams who skip that split end up with language models writing config files that Postgres would have handled in a millisecond. On an airframe integration program, getting the split right is the difference between a 12-month F-22 integration and an 18-month one.</p>
+
+    <div class="split-card" role="group" aria-label="60/30/10 split">
+      <div class="split-item">
+        <div class="num">60<span class="pct">%</span></div>
+        <div class="label">Layer 01</div>
+        <div class="desc">Traditional code and database work. Bus specs, envelope data, safety-of-flight artifacts.</div>
+      </div>
+      <div class="split-item">
+        <div class="num">30<span class="pct">%</span></div>
+        <div class="label">Layer 02</div>
+        <div class="desc">Rule-based logic. Deconfliction rules, IP boundary policy, certification triggers.</div>
+      </div>
+      <div class="split-item">
+        <div class="num">10<span class="pct">%</span></div>
+        <div class="label">Layer 03</div>
+        <div class="desc">Model-driven. Adversary behavior, tactics generation, dynamic threat scaling.</div>
+      </div>
+    </div>
+
+    <p>The methodology is published. The <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">Interpretable Context Methodology</a>, submitted to ACM TiiS, maps context as a layered filesystem (L0 identity through L4 working artifacts) with measurable gains in reproducibility and handoff speed. It is the same shape you would want across T-38, MC-130, F-16, TF-50, F-22, F-35, T-7, and F-15EX: one structure, one vocabulary, learned once and carried forward.</p>
+
+    <p>For regulated-industry exposure, Eduba also publishes the <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">Ethics Engine</a>, a psychometric assessment tool for evaluating ideological and moral patterns in LLMs (<a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">repo here</a>). Relevant when the "AI-enabled" line in ARCADE starts getting harder questions from USAF program offices and allied program staff.</p>
+  </div>
+</section>
+
+<!-- Proof -->
+<section class="proof">
+  <div class="proof-inner">
+    <div>
+      <div class="section-label"><span class="num">02</span>THE CLOSEST REFERENCE</div>
+      <h3>VigilOre. Multi-agent compliance platform. Layered contracts. Government oversight.</h3>
+      <p>The shape rhymes with yours. Government customer, controlled-technology posture, prime/sub orchestration, recurring certification paperwork. Not identical. Close enough that the pattern travels.</p>
+      <p>The work: moved most of the recurring structure into a reusable, interpretable context layer. Stopped re-solving the same problems per cycle.</p>
+    </div>
+
+    <div class="metric-block" role="group" aria-label="VigilOre headline metric">
+      <div class="metric-cap">DRC MINING SECTOR &middot; COMPLIANCE CYCLE</div>
+      <div class="metric-big">160<span class="unit">HRS</span></div>
+      <div style="font-family: var(--r6-mono); font-size: 12px; letter-spacing: 0.18em; color: var(--r6-muted-dark); margin-top:6px; text-transform: uppercase;">Manual work per cycle &raquo; compressed to</div>
+      <div class="metric-big" style="font-size: clamp(40px, 5vw, 64px); margin-top: 12px;">&lt; 5<span class="unit">MIN</span></div>
+
+      <div class="metric-divider"></div>
+
+      <div class="metric-sub">
+        <div>
+          <span class="k">Method</span>
+          <span>Reusable context layer</span>
+        </div>
+        <div>
+          <span class="k">Paper</span>
+          <span>ICM / ACM TiiS</span>
+        </div>
+        <div>
+          <span class="k">Scope</span>
+          <span>Multi-agent</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Credibility -->
+<section class="creds">
+  <div class="creds-inner">
+    <div class="section-label"><span class="num">03</span>WHO WALKS IN THE DOOR</div>
+    <h2 style="font-family: var(--r6-font); font-weight: 700; font-size: clamp(24px, 3vw, 32px); color: var(--r6-heading); margin: 0; max-width: 28ch; line-height: 1.2;">Veteran-led. Published methodology. Carries the enterprise and regulated-industry reference set.</h2>
+
+    <div class="creds-grid">
+      <article class="cred">
+        <div class="tag">FOUNDER</div>
+        <h4>Marine Corps. Cryptographic systems. F-35 and F-18 avionics.</h4>
+        <p>Jake Van Clief, Eduba CEO. Eight years USMC. MSc Future Governance, University of Edinburgh. You do not need to be briefed on why outdoor AR at combat G is hard.</p>
+      </article>
+
+      <article class="cred">
+        <div class="tag">FIELD RECORD</div>
+        <h4>1,500+ people trained. 95% still on the tools at 30 days.</h4>
+        <p>Enterprise training across Correlation One (Pacific Life, Colgate-Palmolive), and executive cohort delivery at KPMG UK, one of the Big Four. 40+ executives in that program alone.</p>
+      </article>
+
+      <article class="cred">
+        <div class="tag">PARTNERSHIPS</div>
+        <h4>Orchestration layer. NLP Logix sits underneath.</h4>
+        <p>Eduba partners with NLP Logix for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists. We route, we don't resell.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="cta-inner">
+    <div>
+      <div class="section-label" style="color: var(--r6-red);"><span class="num" style="color: rgba(255,255,255,0.55);">04</span>NEXT STEP</div>
+      <h2>30 minutes with Matt. Bring one integration that is taking too long.</h2>
+      <p>Live orchestration audit on your whiteboard. We draw the 60/30/10 line across one current airframe program and tell you, specifically, which parts are model-shaped and which parts are a database. You decide whether the frame is worth a deeper engagement.</p>
+      <p style="color: var(--r6-muted-dark); font-family: var(--r6-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 24px;">No deck. No vendor pitch. No follow-up email chain.</p>
+    </div>
+
+    <div class="cta-card">
+      <div class="cta-row">
+        <span class="k">With</span>
+        <span class="v">Matt Creamer &middot; CRO, Eduba</span>
+      </div>
+      <div class="cta-row">
+        <span class="k">Duration</span>
+        <span class="v">30 minutes</span>
+      </div>
+      <div class="cta-row">
+        <span class="k">Format</span>
+        <span class="v">Whiteboard audit. Live.</span>
+      </div>
+      <div class="cta-row">
+        <span class="k">Bring</span>
+        <span class="v">One slow integration</span>
+      </div>
+
+      <a class="cta-btn" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener" aria-label="Book 30 minutes with Matt Creamer">
+        BOOK THE 30 <span class="arrow">&gt;&gt;</span>
+      </a>
+      <div class="cta-small">
+        Or paste: <a href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">calendly.com/thecro-eduba/30min</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>PREPARED BY EDUBA &middot; <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a></div>
+    <div>VETERAN-OWNED &middot; SAM-REGISTERED &middot; UEI Y77RULHKK9Q1</div>
+    <div>THE FACES OF INTERFACE</div>
+  </div>
+</footer>
+
+</body>
+</html>
